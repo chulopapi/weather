@@ -1,0 +1,154 @@
+/* This is the CSS file for the Weather Dashboard"
+
+/* HEADER */
+h1 {
+    font-size: 54px;
+    color: white;
+    font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #343A40;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    box-shadow: 0px 6px 45px 2px rgba(92,92,92,0.57);
+    margin-bottom: 50px;
+}
+
+#headerIcon {
+    height: 75px;
+}
+
+
+
+/* OVERALL BODY */
+
+body {
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+.overallCard {
+    background-color:#343A40;   
+    box-shadow: 0px 6px 45px 3px rgba(92,92,92,0.57);
+}
+
+.displayContainer {
+    border-radius: 12px;
+    padding: 20px 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.mainContainer {
+    min-height: 200px;
+    background-color: white;
+    padding: 20px;
+}
+
+.displayCard {
+    border: 1px solid grey;
+    border-radius: 15px;
+    min-height: 100px;
+    margin: 15px 20px 0 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+/* ASIDE */
+
+aside {
+    background-color: white;
+    padding: 0;
+}
+
+input {
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+li {
+    list-style-type:none;
+    margin: 10px 0;
+    padding: 5px;
+    width: 150px;
+    border: 0.04rem solid black;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+
+/* WEATHER ELEMENTS */
+
+h2 {
+    margin: 0 20px;
+}
+
+#currentDate {
+    font-size: 20px;
+    margin: 0 20px;
+    padding-top: 5px;
+    font-weight: 400;
+}
+
+#currentDescription {
+    margin: 7px 20px 0 20px;
+    font-weight: 400;
+}
+
+.weatherDescription {
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+
+.UV {
+    background-color: red;
+    color: white;
+}
+
+
+h4 {
+    font-size: 22px;
+}
+
+.displayNumber {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.forecastNumber {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.forecastHumid {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.units {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width:400px) {
+    h1 {
+        font-size: 30px;
+    }
+    #current-icon {
+        height: 60px;
+    }
+}

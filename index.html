@@ -1,14 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto:100,300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="Assets/favicon_io/site.webmanifest">
+
 </head>
+ 
 <body>
-    <main>
-        <h1>This is my first Wether Dashboard</h1>
-    </main>
-    
+     <!-- HEADER -->
+     <header class="container-fluid">
+        <div class="row d-flex justify  -content-center">
+            <h1>Weather Dashboard</h1>
+        </div>
+    </header>
+
+    <!-- OVERALL CARD -->
+    <div class="container displayContainer overallCard">
+        <div class="row">
+
+            <!-- ASIDE -->
+            <aside class="col-sm-3 displayContainer order-12 order-sm-1">
+                <form action="submit" id="city-search">
+                    <strong><label for="">Search for a City:</label></strong>
+                    <input type="text" id="city-text" aria-label="Search">
+                </form>
+
+                <div id="searchHistory">
+                </div>
+            </aside>
+
+            <!-- MAIN WEATHER -->
+            <main class="col-sm-9 order-1 order-sm-12">
+
+                <!-- CURRENT WEATHER -->
+                <div class="container displayContainer mainContainer">
+                    <div class="row align-items-center">
+                        <h2 class="city">Today's Weather</h2>
+                        <span id="currentDate"></span>
+                        <span id="currentDescription" class="weatherDescription"></span>
+                        <img id="currentIcon">
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col displayCard">
+                            <h4>Temperature</h4> 
+                            <p class="temp displayNumber"></p>
+                        </div>
+                        <div class="col displayCard">
+                            <h4>Humidity</h4> 
+                            <p class="humidity displayNumber"></p>
+                        </div>
+                        <div class="col displayCard">
+                            <h4>Wind Speed</h4> 
+                            <p class="wind displayNumber"></p>
+                        </div>
+                        <div class="col displayCard">
+                            <h4>UV Index</h4> 
+                            <p class="UV displayNumber"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5-DAY FORECAST -->
+                <div class="container displayContainer mainContainer">
+                    <h2>5-Day Forecast</h2>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col displayCard" data-card="0">
+                            <h4 class="forecastDate"></h4>
+                        </div>
+                        <div class="col displayCard" data-card="1">
+                            <h4 class="forecastDate"></h4>
+                        </div>
+                        <div class="col displayCard" data-card="2">
+                            <h4 class="forecastDate"></h4>
+                        </div>
+                        <div class="col displayCard" data-card="3">
+                            <h4 class="forecastDate"></h4>
+                        </div>
+                        <div class="col displayCard" data-card="4">
+                            <h4 class="forecastDate"></h4>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script src="./assets/js/script.js"></script>
+    <!--<script src="Assets/js/weather.js"></script>
+    <script src="Assets/js/forecast.js"></script>
+    <script src="Assets/js/search.js"></script>-->
+
+
 </body>
+
 </html>
