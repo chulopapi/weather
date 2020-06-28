@@ -1,9 +1,10 @@
-/* This file contains, all the functions needed to comoplete the Weather Dashboard program */
+
+
+/* This file contains, all the functions needed to complete the Weather Dashboard program */
 
 $("#currentDate").text("Today " + moment().format('ddd Do'));
 
-
-// Generate cards 5-day forecast based on current date
+// Generating the cards using a 5-day forecast based on current date
 for (let i = 0; i < 5; i++) {
     var startForecast = i + 1;
     var forecastCard = $(`div[data-card|="${i}"]`);
@@ -29,7 +30,7 @@ $(document).ready(function () {
 /* Weather Function */
 function currentWeather(cityToSearch) {
 
-    // Sample URL: https://api.openweathermap.org/data/2.5/weather?appid=4a56f566a02550ae1a4ca20559e1de75&q=Atlanta&units=imperial;
+    // Sample URL: https://api.openweathermap.org/data/2.5/weather?appid=4b63a0c24a2532739566783158f73387&q=Atlanta&units=imperial;
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIKey + "&q=" + cityToSearch + "&units=imperial";
 
     console.log("queryURL: " + queryURL);
@@ -43,15 +44,13 @@ function currentWeather(cityToSearch) {
 
         $(".city").html(response.name);
         
-        /*$("#currentDate").text(moment(response.dt).format('ddd Do'));*/
         console.log(response);
-        let dt = moment.unix(response.dt).format("MM/DD/YYYY")
+        let dt = moment.unix(response.dt).format("(MM/DD/YYYY)")
         console.log("dt", dt);
 
         $("#currentDate").text(dt);//moment(response.dt).format('YYYY-MM-DD'));
         console.log(response);
         
-
         var temp = Math.round(response.main.temp);
         $(".temp").html(`${temp}`);
         $(".temp").append(`<span class="units">&#176;F</span>`);
@@ -217,7 +216,6 @@ if (localStorage.getItem('Cities') === null) {
     getForecast(cityList[0]);
 }
 
-
 $('.searchItem').on('click', function (event) {
     var itemText = event.target.innerText;
     $('#city-text').val(itemText);
@@ -235,4 +233,3 @@ function addHistory() {
     cityList.unshift(searchedCity);
     localStorage.setItem('Cities', JSON.stringify(cityList));
 };
-

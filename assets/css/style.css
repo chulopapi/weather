@@ -6,7 +6,6 @@ h1 {
     color: white;
     font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /*font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
-
 }
 
 header {
@@ -36,15 +35,12 @@ body {
 
 .overallCard {
     background-color:#343A40;  
-    /*background-color: white;  */ 
-    /*box-shadow: 0px 6px 45px 3px rgba(92,92,92,0.57);*/
     box-shadow: 0px 6px 45px 3px rgba(207, 199, 199, 0.829);
-
 }
 
 .displayContainer {
-    border-radius: 1px;
-    padding: 20px 50px;
+    border-radius: 2px;
+    padding: 30px 50px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -65,11 +61,11 @@ body {
     text-align: center;
 }
 
-/* ASIDE */
+/* First panel - left */
 
 aside {
     background-color: white;
-    padding: 0;
+    padding: 2;
 }
 
 input {
@@ -79,7 +75,7 @@ input {
 
 li {
     list-style-type:none;
-    margin: 10px 0;
+    margin: 5px 0;
     padding: 5px;
     width: 150px;
     border: 0.04rem solid black;
@@ -141,8 +137,7 @@ h4 {
     font-weight: 300;
 }
 
-
-/* MEDIA QUERIES */
+/* @media rules for different media types */
 
 @media (max-width:400px) {
     h1 {
