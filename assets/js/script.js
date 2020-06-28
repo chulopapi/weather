@@ -1,8 +1,6 @@
 /* This file contains, all the functions needed to comoplete the Weather Dashboard program */
 
 $("#currentDate").text("Today " + moment().format('ddd Do'));
-console.log("#curentDate");
-
 
 // Generate cards 5-day forecast based on current date
 for (let i = 0; i < 5; i++) {
@@ -33,7 +31,8 @@ function getForecast(cityToSearch) {
     // Sample URL: http://api.openweathermap.org/data/2.5/forecast?q={city%20name}&appid={your%20api%20key}
     // http://api.openweathermap.org/data/2.5/forecast?q=atlanta&appid=4a56f566a02550ae1a4ca20559e1de75
     var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?appid=" + APIKey + "&q=" + cityToSearch + "&units=imperial";
-
+ console.log(forecastURL);
+ 
     // console.log("Forecast URL: " + forecastURL);
 
     $.ajax({
@@ -46,14 +45,6 @@ function getForecast(cityToSearch) {
 
         // i < 5 for cards for 5-day forecast
         for (let i = 0; i < 5; i++) {
-
-            // For first card, display data from response.list[4]. For second card, display data from response.list[12]..and so on...
-
-            // The API seems to give at least the current day's remaining forecast by 6 hours. So it's 12pm now, and it shows 6pm, 9pm
-            // If you get the weather at 12:01 am that day, you will get 6 am, 9 am , 12 pm, 3 pm, 6pm, 9 pm - so max 6
-            // If you come at 6 pm, you will not get the current day's
-            // If dt_txt = today's date + 1, 12 pm, then give me the main.temp of that array[index]
-
 
             // Where <div data-card="index">
             var forecastCard = $(`div[data-card|="${i}"]`);
@@ -84,10 +75,10 @@ function getForecast(cityToSearch) {
 
 /*  Search Function */
 
-// On page load
-// Retrieve array from localStorage. 
-// If empty, then create list items with default cities
-// Then search for first in array
+// Once the program starts, it presents the cities that are placed under the local storage array
+// I am using the San Francisco Bay area cities as an example 
+// If empty, it uses the list of the array
+
 var cityList = [];
 
 if (localStorage.getItem('Cities') === null) {
@@ -107,7 +98,7 @@ if (localStorage.getItem('Cities') === null) {
     getForecast(cityList[0]);
 
 
-// Else if local storage is not empty, create list items from cities already stored in local storage
+// if not creates the list from storage
 
 } else {
 
@@ -123,47 +114,36 @@ if (localStorage.getItem('Cities') === null) {
     currentWeather(cityList[0]);
     getUVIndex(cityList[0]);
     getForecast(cityList[0]);
-
 }
 
 
 $('.searchItem').on('click', function (event) {
-
     var itemText = event.target.innerText;
-
     $('#city-text').val(itemText);
-
     currentWeather(itemText);
     getUVIndex(itemText);
     getForecast(itemText);
 
 });
 
-
-// If a new city is added, add to the array of cities.
-// Save the cities array to localStorage again.
+// Adding a new city and saves the array to local storage
 function addHistory() {
-
     $('#searchHistory').prepend(`
         <li class="searchItem">${searchedCity}</li>
     `);
-
     cityList.unshift(searchedCity);
-
     localStorage.setItem('Cities', JSON.stringify(cityList));
-
 };
 
 /* Weather Function */
-
 function currentWeather(cityToSearch) {
 
     // Sample URL: https://api.openweathermap.org/data/2.5/weather?appid=4a56f566a02550ae1a4ca20559e1de75&q=Atlanta&units=imperial;
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIKey + "&q=" + cityToSearch + "&units=imperial";
 
-    // console.log("queryURL: " + queryURL);
+    console.log("queryURL: " + queryURL);
 
-    // console.log("City searched: " + $('#city-text').val());
+    console.log("City searched: " + $('#city-text').val());
 
     $.ajax({
         url: queryURL,
@@ -198,14 +178,10 @@ function currentWeather(cityToSearch) {
     });
 };
 
+/* UV function - Latitud and Longitude are a requirement */
 
 function getUVIndex(cityToSearch) {
-
-    // Lat / long are needed for the UV
-    // First, get lat/long of city from main weather call
-
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIKey + "&q=" + cityToSearch;
-
     $.ajax({
         url: queryURL,
         method: "GET"

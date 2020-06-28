@@ -35,8 +35,8 @@ body {
 }
 
 .overallCard {
-    /*background-color:#343A40;  */ 
-    background-color: white;   
+    background-color:#343A40;  
+    /*background-color: white;  */ 
     /*box-shadow: 0px 6px 45px 3px rgba(92,92,92,0.57);*/
     box-shadow: 0px 6px 45px 3px rgba(207, 199, 199, 0.829);
 
@@ -65,7 +65,6 @@ body {
     text-align: center;
 }
 
-
 /* ASIDE */
 
 aside {
@@ -87,7 +86,6 @@ li {
     border-radius: 1px;
     font-weight: 400;
 }
-
 
 /* WEATHER ELEMENTS */
 
@@ -112,12 +110,10 @@ h2 {
     margin-bottom: 0;
 }
 
-
 .UV {
     background-color:  #C12E3C;
     color: white;
 }
-
 
 h4 {
     font-size: 22px;
