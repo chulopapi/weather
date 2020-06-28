@@ -5,6 +5,8 @@ h1 {
     font-size: 54px;
     color: white;
     font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+
 }
 
 header {
@@ -20,9 +22,7 @@ header {
     height: 75px;
 }
 
-
-
-/* OVERALL BODY */
+/* Body */
 
 body {
     background-color: white;
@@ -35,12 +35,15 @@ body {
 }
 
 .overallCard {
-    background-color:#343A40;   
-    box-shadow: 0px 6px 45px 3px rgba(92,92,92,0.57);
+    /*background-color:#343A40;  */ 
+    background-color: white;   
+    /*box-shadow: 0px 6px 45px 3px rgba(92,92,92,0.57);*/
+    box-shadow: 0px 6px 45px 3px rgba(207, 199, 199, 0.829);
+
 }
 
 .displayContainer {
-    border-radius: 12px;
+    border-radius: 1px;
     padding: 20px 50px;
     margin-top: 30px;
     margin-bottom: 50px;
@@ -53,8 +56,9 @@ body {
 }
 
 .displayCard {
-    border: 1px solid grey;
-    border-radius: 15px;
+    background-color: #007BFF;
+    border: 1px solid black;
+    border-radius: 1px;
     min-height: 100px;
     margin: 15px 20px 0 15px;
     padding: 5px;
@@ -80,7 +84,7 @@ li {
     padding: 5px;
     width: 150px;
     border: 0.04rem solid black;
-    border-radius: 5px;
+    border-radius: 1px;
     font-weight: 400;
 }
 
@@ -110,7 +114,7 @@ h2 {
 
 
 .UV {
-    background-color: red;
+    background-color:  #C12E3C;
     color: white;
 }
 
