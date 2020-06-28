@@ -46,13 +46,13 @@ body {
     border-radius: 1px;
     padding: 20px 50px;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .mainContainer {
     min-height: 200px;
     background-color: white;
-    padding: 20px;
+    padding: 30px;
 }
 
 .displayCard {
