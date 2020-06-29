@@ -26,11 +26,9 @@ $(document).ready(function () {
     })
 });
 
-
 /* Weather Function */
 function currentWeather(cityToSearch) {
 
-    // Sample URL: https://api.openweathermap.org/data/2.5/weather?appid=4b63a0c24a2532739566783158f73387&q=Atlanta&units=imperial;
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIKey + "&q=" + cityToSearch + "&units=imperial";
 
     console.log("queryURL: " + queryURL);
@@ -65,7 +63,6 @@ function currentWeather(cityToSearch) {
         // Get icons for current weather
         var currentIcon = response.weather[0].icon;
 
-        // https://openweathermap.org/img/wn/10d@2x.png
         var iconURL = "https://openweathermap.org/img/wn/" + currentIcon + ".png";
         
         $('#currentIcon').attr("src", iconURL);
@@ -123,12 +120,10 @@ function getUVIndex(cityToSearch) {
     });
 };
 
-
 /* Forecast Function */
 
 function getForecast(cityToSearch) {
 
-    // Sample URL: http://api.openweathermap.org/data/2.5/forecast?q={city%20name}&appid={your%20api%20key}
     // http://api.openweathermap.org/data/2.5/forecast?q=atlanta&appid=4a56f566a02550ae1a4ca20559e1de75
     var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?appid=" + APIKey + "&q=" + cityToSearch + "&units=imperial";
  console.log(forecastURL);
@@ -172,7 +167,6 @@ function getForecast(cityToSearch) {
     });
 };
 
-
 /*  Search Function */
 
 // Once the program starts, it presents the cities that are placed under the local storage array
@@ -182,11 +176,8 @@ function getForecast(cityToSearch) {
 var cityList = [];
 
 if (localStorage.getItem('Cities') === null) {
-
     cityList = ["San Francisco", "Sunnyvale", "Palo Alto", "San Jose", "San Mateo", "Mountain View"];
-
     localStorage.setItem('Cities', JSON.stringify(cityList));
-
     cityList.forEach(element => {
         $('#searchHistory').append(`
             <li class="searchItem">${element}</li>
@@ -201,11 +192,8 @@ if (localStorage.getItem('Cities') === null) {
 // if not creates the list from storage
 
 } else {
-
     cityList = JSON.parse(localStorage.getItem('Cities'));
-
     cityList.forEach(element => {
-
         $('#searchHistory').append(`
             <li class="searchItem">${element}</li>
         `);

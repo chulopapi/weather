@@ -1,11 +1,10 @@
-/* This is the CSS file for the Weather Dashboard"
+/*  CSS file for the Weather Dashboard
 
 /* HEADER */
 h1 {
     font-size: 54px;
     color: white;
     font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /*font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
 }
 
 header {
@@ -75,7 +74,7 @@ input {
 
 li {
     list-style-type:none;
-    margin: 5px 0;
+    margin: 5px 10;
     padding: 5px;
     width: 150px;
     border: 0.04rem solid black;
