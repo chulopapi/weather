@@ -20,7 +20,7 @@ Acceptance Criteria:
 
 <img width="1101" alt="Screen Shot 2020-06-28 at 10 28 17 PM" src="https://user-images.githubusercontent.com/14985358/85976247-f8453080-b98e-11ea-8ff8-357656d642b4.png">
 
-2. Once input the name of the city, I am presented with the current condition for that city as well as the view of the current weather conditions.  It also presents the 5 day forecast, showing the date of the week, an icon that represents the weather conditions, the temperature and teh humidity.
+2. Once input the name of the city, I am presented with the current condition for that city as well as the view of the current weather conditions.  It also presents the 5 day forecast, showing the date of the week, an icon that represents the weather conditions, the temperature and the humidity and the UV lights.
 
 <img width="767" alt="Screen Shot 2020-06-28 at 10 34 25 PM" src="https://user-images.githubusercontent.com/14985358/85976816-2e36e480-b990-11ea-99fc-aa04eaed92e3.png">
 
