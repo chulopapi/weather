@@ -9,16 +9,16 @@
     <link href="https://fonts.googleapis.com/css?family=Lato|Roboto:100,300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="Assets/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Assets/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="Assets/favicon_io/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/site.webmanifest">
 
 </head>
- 
+
 <body>
-     <!-- HEADER -->
-     <header class="container-fluid">
+    <!-- HEADER -->
+    <header class="container-fluid">
         <div class="row d-flex justify-content-center">
             <h1>Weather Dashboard</h1>
         </div>
@@ -28,7 +28,7 @@
     <div class="container displayContainer overallCard">
         <div class="row">
 
-            <!-- ASIDE -->
+            <!-- left side frame -->
             <aside class="col-sm-3 displayContainer order-12 order-sm-1">
                 <form action="submit" id="city-search">
                     <strong><label for="">Search for a City:</label></strong>
@@ -52,19 +52,19 @@
                     </div>
                     <div class="row justify-content-between">
                         <div class="col displayCard">
-                            <h4>Temperature</h4> 
+                            <h4>Temperature</h4>
                             <p class="temp displayNumber"></p>
                         </div>
                         <div class="col displayCard">
-                            <h4>Humidity</h4> 
+                            <h4>Humidity</h4>
                             <p class="humidity displayNumber"></p>
                         </div>
                         <div class="col displayCard">
-                            <h4>Wind Speed</h4> 
+                            <h4>Wind Speed</h4>
                             <p class="wind displayNumber"></p>
                         </div>
                         <div class="col displayCard">
-                            <h4>UV Index</h4> 
+                            <h4>UV Index</h4>
                             <p class="UV displayNumber"></p>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
 
                 <!-- 5-DAY FORECAST -->
                 <div class="container displayContainer mainContainer">
-                    <h2>5-Day Forecast</h2>
+                    <h2>5-Day Forecast:</h2>
                     <div class="row d-flex justify-content-between">
                         <div class="col displayCard" data-card="0">
                             <h4 class="forecastDate"></h4>
@@ -96,14 +96,8 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
     <script src="./assets/js/script.js"></script>
-    <!--<script src="Assets/js/weather.js"></script>
-    <script src="Assets/js/forecast.js"></script>
-    <script src="Assets/js/search.js"></script>-->
-
 
 </body>
 

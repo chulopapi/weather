@@ -28,11 +28,8 @@ $(document).ready(function () {
 
 /* Weather Function */
 function currentWeather(cityToSearch) {
-
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIKey + "&q=" + cityToSearch + "&units=imperial";
-
     console.log("queryURL: " + queryURL);
-
     console.log("City searched: " + $('#city-text').val());
 
     $.ajax({
@@ -150,7 +147,6 @@ function getForecast(cityToSearch) {
             // Get icons for current weather
             var forecastIcon = response.list[forecastStart].weather[0].icon;
 
-            // https://openweathermap.org/img/wn/10d@2x.png
             var iconURL = "https://openweathermap.org/img/wn/" + forecastIcon + ".png";
             var forecastDescription = response.list[forecastStart].weather[0].description;
 
